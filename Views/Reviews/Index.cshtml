@@ -1,0 +1,25 @@
+﻿@model IEnumerable<MVCTraining.Models.RestaurantReview>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>The Latest Reviews</h2>
+
+    We are showing the last @Model.Count() reviews
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @foreach (var item in Model)
+    {
+        <div class="container">
+            <h4>@item.Name</h4>
+            <span>@item.Rating</span>
+            <p>@item.City, @item.Country</p>
+
+
+            <span class="right">
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+            </span>
+        </div>
+    }
