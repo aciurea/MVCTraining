@@ -27,6 +27,8 @@ C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.Deployment.
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.Razor.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\WebGrease.dll
+C:\Users\user\Desktop\JavaScript\MVCTraining\bin\EntityFramework.xml
+C:\Users\user\Desktop\JavaScript\MVCTraining\bin\EntityFramework.SqlServer.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Helpers.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Mvc.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Optimization.xml
@@ -36,8 +38,6 @@ C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.Deployment.
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.Razor.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Antlr3.Runtime.pdb
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Newtonsoft.Json.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\EntityFramework.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\EntityFramework.SqlServer.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.AspNet.Identity.EntityFramework.xml
@@ -50,6 +50,5 @@ C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.OAuth.x
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.pdb

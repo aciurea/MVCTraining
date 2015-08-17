@@ -9,15 +9,12 @@ namespace MVCTraining.Controllers
 {
     public class HomeController : Controller
     {
+        MVCTrainingDb _db = new MVCTrainingDb();
         public ActionResult Index()
         {
-            var controller = RouteData.Values["controller"];
-            var action = RouteData.Values["action"];
-            var id = RouteData.Values["id"];
-            var message = String.Format("{0} {1} {2}", controller, action, id);
+            var model = _db.Restaurants.ToList();
 
-            ViewBag.Message = message;
-            return View();
+            return View(model);
         }
 
         public ActionResult About()
@@ -34,6 +31,14 @@ namespace MVCTraining.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            if (_db != null)
+            {
+                _db.Dispose();
+            }
+            base.Dispose(disposing);
         }
     }
 }
