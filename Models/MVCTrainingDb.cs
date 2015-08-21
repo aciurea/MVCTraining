@@ -13,5 +13,6 @@ namespace MVCTraining.Models
         { }
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<RestaurantReview> Reviews { get; set; }
+        public DbSet<Vehicle> Vehicle { get; set; }
     }
-}
+} 

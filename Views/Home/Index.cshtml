@@ -1,13 +1,22 @@
-﻿@model IEnumerable<MVCTraining.Models.Restaurant>
+﻿@model IEnumerable<MVCTraining.Models.RestaurantListViewModel>
 @{
     ViewBag.Title = "Home Page";
 }
+
+<form method="get" class="container" style="padding-top:20px;">
+    <div class="form-group">
+        <input type="search" name="searchTerm" class="form-control input-sm" />
+        <input type="submit" value="Search by name" class="btn btn-sm btn-success" />
+    </div>
+</form>
+
 
 @foreach (var item in Model)
 {
     <div>
         <h4>@item.Name</h4>
         <div>@item.City, @item.Country</div>
+        <div>@item.CountOfReviews</div>
         <hr />
     </div>
 
