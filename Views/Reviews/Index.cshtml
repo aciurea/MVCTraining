@@ -1,12 +1,8 @@
 ﻿@model MVCTraining.Models.Restaurant
 
-
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 @Html.Partial("_Reviews", Model.Reviews)
 
 
 <h2>Reviews for @Model.Name</h2>
 
-<p>@Html.ActionLink("Create New", "Create", new { @id = Model.Id })</p>
+<p>@Html.ActionLink("Create New Review", "Create", new { @restaurantId = Model.Id })</p>
