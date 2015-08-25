@@ -28,11 +28,8 @@ namespace MVCTraining.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Restaurant restaurant = db.Restaurants.Find(id);
-            if (restaurant == null)
-            {
-                return HttpNotFound();
-            }
-            return View(restaurant);
+
+            return View();
         }
 
         // GET: Restaurant/Create
