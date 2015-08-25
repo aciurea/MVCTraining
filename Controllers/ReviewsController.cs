@@ -58,6 +58,23 @@ namespace MVCTraining.Controllers
             return View(review);
         }
 
+        public ActionResult Delete(int? id)
+        {
+            var model = _db.Reviews.Find(id);
+            if (model == null)
+            { return HttpNotFound(); }
+            return View(model);
+        }
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteConfirmed(int? id)
+        {
+            var model = _db.Reviews.Find(id);
+            _db.Reviews.Remove(model);
+            _db.SaveChanges();
+            return RedirectToAction("Index", new { id = model.RestaurantId });
+        }
+
 
         protected override void Dispose(bool disposing)
         {
