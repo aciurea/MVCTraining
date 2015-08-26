@@ -10,9 +10,10 @@ namespace MVCTraining
         {
             bundles.Add(new ScriptBundle("~/bundles/mvctraining").Include
                 ("~/Scripts/jquery-{version}.js",
-                "~/Scripts/jquery-ui-{version}.js",
-                "~/Scripts/jquery.unobtrusive*",
-                "~/Scripts/jquery.validate*"));
+                    "~/Scripts/jquery-ui-{version}.js",
+                    "~/Scripts/jquery.unobtrusive*",
+                    "~/Scripts/jquery.validate*",
+                    "~/Scripts/mvc.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
@@ -31,7 +32,8 @@ namespace MVCTraining
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/PagedList.css"));
         }
     }
 }

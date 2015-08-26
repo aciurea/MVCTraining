@@ -1,25 +1,28 @@
-﻿@model IEnumerable<MVCTraining.Models.RestaurantListViewModel>
+﻿@model IPagedList<RestaurantListViewModel>
+
 @{
     ViewBag.Title = "Home Page";
 }
 
-@*<form method="get" class="container" style="padding-top:20px;">
-        <div class="form-horizontal row">
-            <div class="form-group">
-                <div class="col-md-3"><input type="search" name="searchTerm" class="form-control input-sm" style="width:300px"/></div>
-                <input type="submit" value="Search by name" class="btn btn-sm btn-success" />
+<form method="get" class="container" style="padding-top:20px;" action="@Url.Action("Index")" data-mvc-ajax="true" data-mvc-target="#restaurantList">
+    <div class="form-horizontal row">
+        <div class="form-group">
+            <div class="col-md-3">
+                <input type="search" name="searchTerm" class="form-control input-sm" style="width:300px" data-mvc-autocomplete="@Url.Action("AutoComplete")" />
             </div>
+            <input type="submit" value="Search by name" class="btn btn-sm btn-success" />
         </div>
-    </form>*@
+    </div>
+</form>
 
-@using (Ajax.BeginForm(
-                                                                                                 new AjaxOptions
-                                                                                                 {
-                                                                                                     HttpMethod = "get",
-                                                                                                     InsertionMode = InsertionMode.Replace,
-                                                                                                     UpdateTargetId = "restaurantList"
-                                                                                                 }))
-{<div style="padding-top:20px;">
+@*@using (Ajax.BeginForm(
+    new AjaxOptions
+    {
+        HttpMethod = "get",
+        InsertionMode = InsertionMode.Replace,
+        UpdateTargetId = "restaurantList"
+    }))*@
+@*{ <div style="padding-top:20px;">
         <div class="form-horizontal row">
             <div class="form-group">
                 <div class="col-md-3"><input type="search" name="searchTerm" class="form-control input-sm" style="width:300px" /></div>
@@ -27,7 +30,7 @@
             </div>
         </div>
     </div>
-}
+    }*@
 
 @Html.Partial("_Restaurants", Model)
 

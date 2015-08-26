@@ -4,13 +4,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace MVCTraining.Controllers
 {
     public class HomeController : Controller
     {
         MVCTrainingDb _db = new MVCTrainingDb();
-        public ActionResult Index(string searchTerm = null)
+
+
+
+
+        public ActionResult AutoComplete(string term)
+        {
+            var model = _db.Restaurants
+                .Where(r => r.Name.StartsWith(term))
+                .Select(r => new
+                {
+                    label = r.Name
+                });
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+
+
+        public ActionResult Index(int page = 1, string searchTerm = null)
         {
             var model = _db.Restaurants.
                 OrderByDescending(r => r.Reviews.Average(review => review.Rating))
@@ -22,7 +40,7 @@ namespace MVCTraining.Controllers
                     City = r.City,
                     Country = r.Country,
                     CountOfReviews = r.Reviews.Count()
-                });
+                }).ToPagedList(page, 10);
 
             if (Request.IsAjaxRequest())
             {
