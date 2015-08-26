@@ -1,12 +1,19 @@
-﻿@model IEnumerable<MVCTraining.Models.RestaurantListViewModel>
+﻿@model IPagedList<RestaurantListViewModel>
 <div id="restaurantList">
-    @foreach (var item in Model)
-    {
-        <div>
-            <h4>@item.Name</h4>
-            <div>@item.City, @item.Country</div>
-            <div>@item.CountOfReviews</div>
-            <hr />
-        </div>
-    }
+
+    <div class="pagedList" data-mvc-target="#restaurantList">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page }),
+    PagedListRenderOptions.MinimalWithItemCountText)
+</div>
+
+
+@foreach (var item in Model)
+{
+    <div>
+        <h4>@item.Name</h4>
+        <div>@item.City, @item.Country</div>
+        <div>@item.CountOfReviews</div>
+        <hr />
+    </div>
+}
 </div>

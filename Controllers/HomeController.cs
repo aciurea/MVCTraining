@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace MVCTraining.Controllers
 {
@@ -12,11 +13,12 @@ namespace MVCTraining.Controllers
         MVCTrainingDb _db = new MVCTrainingDb();
 
 
+
+
         public ActionResult AutoComplete(string term)
         {
             var model = _db.Restaurants
                 .Where(r => r.Name.StartsWith(term))
-                .Take(10)
                 .Select(r => new
                 {
                     label = r.Name
@@ -26,7 +28,7 @@ namespace MVCTraining.Controllers
 
 
 
-        public ActionResult Index(string searchTerm = null)
+        public ActionResult Index(int page = 1, string searchTerm = null)
         {
             var model = _db.Restaurants.
                 OrderByDescending(r => r.Reviews.Average(review => review.Rating))
@@ -38,7 +40,7 @@ namespace MVCTraining.Controllers
                     City = r.City,
                     Country = r.Country,
                     CountOfReviews = r.Reviews.Count()
-                });
+                }).ToPagedList(page, 10);
 
             if (Request.IsAjaxRequest())
             {

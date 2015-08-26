@@ -53,3 +53,7 @@ C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.Microso
 C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.pdb
 C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\JavaScript\MVCTraining\bin\PagedList.dll
+C:\Users\user\Desktop\JavaScript\MVCTraining\bin\PagedList.Mvc.dll
+C:\Users\user\Desktop\JavaScript\MVCTraining\bin\PagedList.xml
+C:\Users\user\Desktop\JavaScript\MVCTraining\bin\PagedList.Mvc.xml

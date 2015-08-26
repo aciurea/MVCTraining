@@ -40,12 +40,27 @@ $(function () {
         $input.autocomplete(options);
     }
 
+    var getPage = function () {
+        var $a = $(this);
+
+        options = {
+            url: $a.attr("href"),
+            data: $('form').serialize(),
+            type: "get"
+        }
+        $.ajax(options).done(function (data) {
+            var target = $a.parents("div.pagedList").attr("data-mvc-target");
+            $(target).replaceWith(data);
+        });
+        return false;
+    };
+
 
 
     $("form[data-mvc-ajax='true']").submit(ajaxFormSubmit);
     $("input[data-mvc-autocomplete]").each(createAutoComplete);
 
-
+    $(".main-content").on("click", ".pagedList a", getPage);
 
 
 
