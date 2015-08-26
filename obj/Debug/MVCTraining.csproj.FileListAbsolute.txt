@@ -52,3 +52,4 @@ C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.Twitter
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.pdb
+C:\Users\user\Desktop\JavaScript\MVCTraining\obj\Debug\MVCTraining.csprojResolveAssemblyReference.cache

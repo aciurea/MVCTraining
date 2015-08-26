@@ -14,18 +14,12 @@ namespace MVCTraining.Migrations
 
         protected override void Seed(MVCTraining.Models.MVCTrainingDb context)
         {
-            //  This method will be called after migrating to the latest version.
+            for (var i = 0; i < 1000; i++)
+            {
+                context.Restaurants.AddOrUpdate(r => r.Name,
+                    new Models.Restaurant { Name = i.ToString(), City = "Nowhere", Country = "USA" });
+            }
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
         }
     }
 }
