@@ -18,7 +18,35 @@ $(function () {
         return false;
     };
 
-    $("form[data-mvc-ajax='true'").submit(ajaxFormSubmit);
+
+    var submitAutoCompleteForm = function (event, ui) {
+        var $input = $(this);
+        $input.val(ui.item.label);
+
+        var $form = $input.parents("form:first");
+        $form.submit();
+    }
+
+
+    var createAutoComplete = function () {
+
+        var $input = $(this);
+
+        var options = {
+            source: $input.attr("data-mvc-autocomplete"),
+            select: submitAutoCompleteForm
+        };
+
+        $input.autocomplete(options);
+    }
+
+
+
+    $("form[data-mvc-ajax='true']").submit(ajaxFormSubmit);
+    $("input[data-mvc-autocomplete]").each(createAutoComplete);
+
+
+
 
 
 });

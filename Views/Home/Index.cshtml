@@ -7,7 +7,7 @@
     <div class="form-horizontal row">
         <div class="form-group">
             <div class="col-md-3">
-                <input type="search" name="searchTerm" class="form-control input-sm" style="width:300px" />
+                <input type="search" name="searchTerm" class="form-control input-sm" style="width:300px" data-mvc-autocomplete="@Url.Action("AutoComplete")" />
             </div>
             <input type="submit" value="Search by name" class="btn btn-sm btn-success" />
         </div>
@@ -22,14 +22,14 @@
         UpdateTargetId = "restaurantList"
     }))*@
 @*{ <div style="padding-top:20px;">
-    <div class="form-horizontal row">
-        <div class="form-group">
-            <div class="col-md-3"><input type="search" name="searchTerm" class="form-control input-sm" style="width:300px" /></div>
-            <input type="submit" value="Search by name" class="btn btn-sm btn-success" />
+        <div class="form-horizontal row">
+            <div class="form-group">
+                <div class="col-md-3"><input type="search" name="searchTerm" class="form-control input-sm" style="width:300px" /></div>
+                <input type="submit" value="Search by name" class="btn btn-sm btn-success" />
+            </div>
         </div>
     </div>
-</div>
-}*@
+    }*@
 
 @Html.Partial("_Restaurants", Model)
 

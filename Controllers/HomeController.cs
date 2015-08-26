@@ -10,6 +10,22 @@ namespace MVCTraining.Controllers
     public class HomeController : Controller
     {
         MVCTrainingDb _db = new MVCTrainingDb();
+
+
+        public ActionResult AutoComplete(string term)
+        {
+            var model = _db.Restaurants
+                .Where(r => r.Name.StartsWith(term))
+                .Take(10)
+                .Select(r => new
+                {
+                    label = r.Name
+                });
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+
+
         public ActionResult Index(string searchTerm = null)
         {
             var model = _db.Restaurants.
