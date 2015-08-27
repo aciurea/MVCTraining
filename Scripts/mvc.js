@@ -34,7 +34,8 @@ $(function () {
 
         var options = {
             source: $input.attr("data-mvc-autocomplete"),
-            select: submitAutoCompleteForm
+            select: submitAutoCompleteForm,
+            minLength: 1
         };
 
         $input.autocomplete(options);
@@ -43,7 +44,7 @@ $(function () {
     var getPage = function () {
         var $a = $(this);
 
-        options = {
+        var options = {
             url: $a.attr("href"),
             data: $('form').serialize(),
             type: "get"
@@ -55,13 +56,9 @@ $(function () {
         return false;
     };
 
-
-
     $("form[data-mvc-ajax='true']").submit(ajaxFormSubmit);
     $("input[data-mvc-autocomplete]").each(createAutoComplete);
 
     $(".main-content").on("click", ".pagedList a", getPage);
-
-
 
 });
