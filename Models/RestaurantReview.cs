@@ -22,5 +22,6 @@ namespace MVCTraining.Models
         public string ReviewerName { get; set; }
         public int RestaurantId { get; set; }
         public int Test2 { get; set; }
+        public int Test { get; set; }
     }
 }
