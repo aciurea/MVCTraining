@@ -7,5 +7,6 @@ namespace MVCTraining.Models
 {
     public class Test
     {
+        //added some text
     }
 }
