@@ -21,5 +21,6 @@ namespace MVCTraining.Models
         [DisplayFormat(NullDisplayText = "anonymous")]
         public string ReviewerName { get; set; }
         public int RestaurantId { get; set; }
+        public int Test { get; set; }
     }
 }
