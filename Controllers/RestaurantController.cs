@@ -12,6 +12,7 @@ namespace MVCTraining.Controllers
 {
     public class RestaurantController : Controller
     {
+
         private MVCTrainingDb db = new MVCTrainingDb();
 
         // GET: Restaurant
