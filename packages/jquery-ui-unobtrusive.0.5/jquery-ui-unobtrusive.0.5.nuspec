@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>jquery-ui-unobtrusive</id>
+    <version>0.5</version>
+    <title>jquery-ui-unobtrusive</title>
+    <authors>dcowart</authors>
+    <owners>dcowart</owners>
+    <projectUrl>https://github.com/davecowart/jquery-ui-unobtrusive</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Unobtrusive jQuery UI allows you to use attributes on your HTML elements to activate and configure jQuery UI widgets.</description>
+    <summary>Unobtrusive jQuery UI allows you to use attributes on your HTML elements to activate and configure jQuery UI widgets.</summary>
+    <tags>jQuery javascript jQuery-UI unobtrusive</tags>
+    <dependencies>
+      <dependency id="jQuery.UI.Combined" version="1.8.13" />
+    </dependencies>
+  </metadata>
+</package>
