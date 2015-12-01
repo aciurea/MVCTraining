@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using MVCTraining.Extensions;
 
 namespace MVCTraining.Controllers
 {
@@ -22,6 +23,17 @@ namespace MVCTraining.Controllers
                     label = r.Name
                 });
             return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
+        [IsMobile]
+        public ActionResult Register()
+        {
+            return Json("{Message:Display on Mobile Decives}");
+        }
+
+        public ActionResult Register(string name)
+        {
+            return View();
         }
 
 
