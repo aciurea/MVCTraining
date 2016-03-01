@@ -17,7 +17,6 @@ C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.Microso
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Newtonsoft.Json.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Owin.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Helpers.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Mvc.dll
@@ -29,13 +28,7 @@ C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.Razor.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\WebGrease.dll
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\EntityFramework.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\EntityFramework.SqlServer.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Helpers.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Mvc.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Optimization.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.Razor.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.Deployment.xml
-C:\Users\user\Desktop\JavaScript\MVCTraining\bin\System.Web.WebPages.Razor.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Antlr3.Runtime.pdb
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Newtonsoft.Json.xml
 C:\Users\user\Desktop\JavaScript\MVCTraining\bin\Microsoft.AspNet.Identity.Core.xml

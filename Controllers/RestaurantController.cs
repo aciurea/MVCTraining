@@ -26,7 +26,7 @@ namespace MVCTraining.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new HttpStatusCodeResult((int) HttpStatusCode.BadRequest);
             }
             Restaurant restaurant = db.Restaurants.Find(id);
 
@@ -61,7 +61,7 @@ namespace MVCTraining.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new HttpStatusCodeResult((int) HttpStatusCode.BadRequest);
             }
             Restaurant restaurant = db.Restaurants.Find(id);
             if (restaurant == null)
@@ -92,7 +92,7 @@ namespace MVCTraining.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new HttpStatusCodeResult((int)HttpStatusCode.BadRequest);
             }
             Restaurant restaurant = db.Restaurants.Find(id);
             if (restaurant == null)
