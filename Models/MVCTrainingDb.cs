@@ -9,7 +9,7 @@ namespace MVCTraining.Models
     public class MVCTrainingDb : DbContext
     {
         public MVCTrainingDb()
-            : base("name=DefaultConnection")
+            : base("name=MvcTrainingConnection")
         { }
         public DbSet<Restaurant> Restaurants { get; set; }
         public DbSet<RestaurantReview> Reviews { get; set; }
