@@ -14,9 +14,9 @@ namespace MVCTraining.Controllers
         {
 
             var model = _db.Restaurants
-                .OrderByDescending(r => r.Reviews.Count())
-                .Take(10)
+                .OrderBy(r=>r.Id)
                 .Where(r => searchTerm == null || r.Name.StartsWith(searchTerm))
+                .Take(10)
                 .Select(r => new RestaurantViewModel
                 {
                     Id = r.Id,
@@ -25,7 +25,10 @@ namespace MVCTraining.Controllers
                     City = r.City,
                     CountOfReviews = r.Reviews.Count()
                 });
-
+            if (Request.IsAjaxRequest())
+            {
+                return PartialView("_Restaurants", model);
+            }
             return View(model);
         }
 

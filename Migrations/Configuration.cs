@@ -1,3 +1,5 @@
+using MVCTraining.Models;
+
 namespace MVCTraining.Migrations
 {
     using System;
@@ -10,22 +12,21 @@ namespace MVCTraining.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
         }
 
         protected override void Seed(MVCTraining.Models.MVCTrainingDb context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            for (var i = 0; i < 1000; i++)
+            {
+                context.Restaurants.AddOrUpdate(r => r.Name,
+                    new Restaurant
+                    {
+                        Name = i.ToString(),
+                        City = "Nowwhere",
+                        Country = "USA"
+                    });
+            }
         }
     }
 }
