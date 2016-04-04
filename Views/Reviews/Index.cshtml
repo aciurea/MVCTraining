@@ -1,17 +1,13 @@
-﻿@model IEnumerable<MVCTraining.Models.RestaurantReview>
+﻿@model  MVCTraining.Models.Restaurant
+
 
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>The Latest Reviews</h2>
+<h2>Reviews for @Model.Name</h2>
+@Html.Partial("_Review", @Model.Reviews)
 
-    We are showing the last @Model.Count() reviews
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    @foreach (var item in Model)
-    {
-        @Html.Partial("_Review", item)
-
-    }
+<p>
+    @Html.ActionLink("Create New", "Create", new { restaurantId = @Model.Id })
+</p>

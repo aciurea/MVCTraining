@@ -10,9 +10,21 @@ namespace MVCTraining.Controllers
     public class HomeController : Controller
     {
         MVCTrainingDb _db = new MVCTrainingDb();
-        public ActionResult Index()
+        public ActionResult Index(string searchTerm = null)
         {
-            var model = _db.Restaurants.ToList();
+
+            var model = _db.Restaurants
+                .OrderByDescending(r => r.Reviews.Count())
+                .Take(10)
+                .Where(r => searchTerm == null || r.Name.StartsWith(searchTerm))
+                .Select(r => new RestaurantViewModel
+                {
+                    Id = r.Id,
+                    Name = r.Name,
+                    Country = r.Country,
+                    City = r.City,
+                    CountOfReviews = r.Reviews.Count()
+                });
 
             return View(model);
         }

@@ -1,12 +1,29 @@
-﻿@model MVCTraining.Models.RestaurantReview
+﻿@model IEnumerable<MVCTraining.Models.RestaurantReview>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
 
-<div class="container">
-    <h4>@Model.Name</h4>
-    <span>@Model.Rating</span>
-    <p>@Model.City, @Model.Country</p>
+        <th></th>
+    </tr>
 
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Body)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
-    <span class="right">
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
-    </span>
-</div>
+</table>
