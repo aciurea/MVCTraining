@@ -1,0 +1,7 @@
+*.mdf
+*.ldf
+*.db
+*.suo
+*.cache
+*.pdb
+*.user
